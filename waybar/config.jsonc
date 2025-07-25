@@ -10,7 +10,7 @@
     },
     "custom/vpn": {
         "format": "{}",
-        "exec": "nordvpn status | sed s/Status/VPN/",
+        "exec": "bash ~/.config/waybar/scripts/vpn-status.bat",
         "interval": 10
     },
     "hyprland/workspaces": {
