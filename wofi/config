@@ -1,0 +1,13 @@
+xoffset=330
+yoffset=100
+show=drun
+width=600
+height=400
+always_parse_args=true
+show_all=true
+print_command=true
+layer=overlay
+insensitive=true
+
+prompt=
+allow_images=true

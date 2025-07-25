@@ -1,0 +1,71 @@
+{
+    "layer": "top",
+    "position": "top",
+	    "reload_style_on_change":true,
+    "modules-left": ["cpu","temperature","network", "custom/vpn"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["battery", "backlight", "pulseaudio", "clock"],
+    "pulseaudio":{
+         "format": "{volume}%"
+    },
+    "custom/vpn": {
+        "format": "{}",
+        "exec": "nordvpn status | sed s/Status/VPN/",
+        "interval": 10
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons":
+        {
+            "empty":    "●",
+            "active":   "●",
+            "default":  "●"
+        }
+    },
+    "backlight": 
+    {
+        "device": "intel_backlight",
+        "format": "{percent}%"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "states": {
+            "warning": 10,
+            "critical": 25,
+            "healthy": 100
+        },
+        "format-icons": [
+            "----------",
+            "▰---------",
+            "▰▰--------",
+            "▰▰▰-------",
+            "▰▰▰▰------",
+            "▰▰▰▰▰-----",
+            "▰▰▰▰▰▰----",
+            "▰▰▰▰▰▰▰---",
+            "▰▰▰▰▰▰▰▰--",
+            "▰▰▰▰▰▰▰▰▰-",
+            "▰▰▰▰▰▰▰▰▰▰"
+        ],
+        "format-charging":"{capacity}% {icon}",
+        "interval": 1
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "cpu": {
+	"format": "CPU: {usage}%"
+    },
+    "network": {
+   	"interface": "wlan0",
+    	"format": "{ifname}",
+    	"format-wifi": "▲ {bandwidthUpBits} ▼ {bandwidthDownBits}",
+    	"format-ethernet": "{ipaddr}/{cidr}",
+    	"format-disconnected": "",
+    	"tooltip-format": "{ifname} via {gwaddr}",
+    	"tooltip-format-wifi": "{essid}",
+    	"tooltip-format-ethernet": "{ifname}",
+    	"tooltip-format-disconnected": "Disconnected",
+    	"max-length": 50
+    }
+}

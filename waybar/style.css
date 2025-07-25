@@ -1,0 +1,104 @@
+window#waybar
+{
+    background-color: rgba(0,0,0,0);
+}
+
+#cpu,
+#upower,
+#pulseaudio,
+#temperature,
+#battery,
+#workspaces,
+#network,
+#backlight,
+#clock,
+#custom-vpn
+{
+    font-family: 'JetBrainsMono NF';
+    color: rgb(240, 240, 240);
+	background-color: rgba(10,10,10,0.8);
+	padding-left: 4px;
+	padding-right: 4px;
+	margin: 4px;
+	border-radius: 4px;
+    font-weight:300;
+    border-width: 2px;
+    border-color: rgba(10, 10, 10, 0);
+    border-style: solid;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
+    /*backdrop-filter: blur(16px);*/
+}
+
+/* BATTERY */
+
+#battery.plugged.warning,
+#battery.plugged.critical,
+#battery.plugged.healthy,
+#battery.plugged{
+	color: rgba(255, 255, 255, 1);
+}
+
+#battery.warning {
+	color: rgba(255, 0, 0, 0.3);
+}
+
+#battery.critical {
+	color: #ffa500;
+}
+
+#battery.healthy {
+	color: #7FFFD4;
+}
+
+/* TEMPERATURE */
+#temperature {
+	background-image: url("/home/olav/.config/waybar/icons/cpu-fan.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+    padding-left: 24px;
+}
+
+/* CPU */
+#cpu {
+	background-image: url("/home/olav/.config/waybar/icons/cpu.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 24px;
+}
+
+/* CLOCK */
+#clock {
+	background-image: url("/home/olav/.config/waybar/icons/clock.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 24px;
+}
+
+#custom-vpn {
+	background-image: url("/home/olav/.config/waybar/icons/vpn.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 24px;
+}
+
+#workspaces {
+    padding: 0px 6px;
+}
+
+#workspaces button {
+    all:unset;
+    padding: 0px 6px 0px 6px;
+}
+
+#workspaces button.active {
+    color: #9DE19A;
+
+}
+
+#pulseaudio {
+    min-width: 30px;
+}
+
+#backlight{
+    min-width: 30px;
+}
